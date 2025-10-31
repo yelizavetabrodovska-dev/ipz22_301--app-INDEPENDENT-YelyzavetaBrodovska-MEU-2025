@@ -1,0 +1,147 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0f2b1e;
+  color: #e6f0eb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Верхня панель */
+header {
+  background-color: #164a2e;
+  border-bottom: 3px solid #1e6b40;
+  padding: 25px 60px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Центрування тексту заголовка */
+.title-block {
+  text-align: center;
+  flex: 1; /* дозволяє центру вирівнятись між фото */
+  margin-left: 150px;
+}
+
+.title-block h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #baf2c7;
+}
+
+.title-block p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #e6f0eb;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #2d8f5c;
+  background-color: #133e27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Кнопки лабораторних */
+.lab-buttons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  background-color: #1a3c2b;
+  padding: 15px 60px;
+  gap: 12px;
+}
+
+.lab-btn {
+  background-color: #256b46;
+  border: none;
+  color: #e6f0eb;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.lab-btn:hover {
+  background-color: #2d8f5c;
+  transform: scale(1.05);
+}
+
+.lab-btn:active {
+  background-color: #1c5233;
+  transform: scale(0.97);
+}
+
+/* Активна кнопка */
+.lab-btn.active {
+  background-color: #33a365;
+  color: #ffffff;
+}
+
+/* Основний макет */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 60px;
+}
+
+/* Бокове меню */
+.sidebar {
+  width: 230px;
+  background-color: #153524;
+  padding: 15px;
+  border-radius: 20px;
+  margin-right: 25px;
+}
+
+.sidebar button {
+  width: 100%;
+  background-color: #256b46;
+  border: none;
+  color: #e6f0eb;
+  padding: 12px;
+  border-radius: 15px;
+  margin: 6px 0;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.sidebar button:hover {
+  background-color: #2d8f5c;
+}
+
+.sidebar button:active {
+  background-color: #1c5233;
+}
+
+/* Контентна область */
+.content {
+  flex: 1;
+  background-color: #1b3a28;
+  border-radius: 20px;
+  padding: 25px;
+  min-height: 420px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
