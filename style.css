@@ -1,147 +1,194 @@
+/* ===== БАЗА ===== */
 body {
   font-family: "Segoe UI", sans-serif;
-  background-color: #0f2b1e;
-  color: #e6f0eb;
   margin: 0;
-  padding: 0;
+  background: #FFFCF4;
+  color: #222;
 }
 
-/* Верхня панель */
-header {
-  background-color: #164a2e;
-  border-bottom: 3px solid #1e6b40;
-  padding: 25px 60px;
-}
-
-.header-content {
+/* ===== ШАПКА ===== */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #092509;
+  color: #ffffff;
+  padding: 75px 75px;
 }
 
-/* Центрування тексту заголовка */
-.title-block {
-  text-align: center;
-  flex: 1; /* дозволяє центру вирівнятись між фото */
-  margin-left: 150px;
-}
-
-.title-block h1 {
-  margin: 0;
+.header-info h1 {
+  margin-left: 650px;
   font-size: 28px;
-  color: #baf2c7;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
-.title-block p {
-  margin: 6px 0;
-  font-size: 15px;
-  color: #e6f0eb;
+.header-info h3 {
+  margin-left: 650px;
+  font-weight: normal;
+  font-size: 20px;
+  flex: 1;
+  text-align: center;
 }
 
-.photo {
-  width: 200px;
-  height: 200px;
+.header-info p {
+  margin-left: 650px;
+  font-size: 16px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.student-photo img {
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid #2d8f5c;
-  background-color: #133e27;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+  margin-left: 40px;
+}
+
+/* ===== КНОПКИ ЛАБОРАТОРНИХ ===== */
+.lab-nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Кнопки лабораторних */
-.lab-buttons {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  background-color: #1a3c2b;
-  padding: 15px 60px;
-  gap: 12px;
+  background: #ffffff;
+  padding: 15px 20px;
+  gap: 15px;
 }
 
 .lab-btn {
-  background-color: #256b46;
-  border: none;
-  color: #e6f0eb;
-  padding: 12px 20px;
-  border-radius: 20px;
+  background: #d9e1d3;
+  border: 3px solid #8b9b7a;
+  border-radius: 30px;
+  padding: 15px 30px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.25s ease;
+  font-size: 16px;
+  transition: 0.2s;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 .lab-btn:hover {
-  background-color: #2d8f5c;
-  transform: scale(1.05);
+  background: #cfdac7;
 }
 
-.lab-btn:active {
-  background-color: #1c5233;
-  transform: scale(0.97);
-}
-
-/* Активна кнопка */
 .lab-btn.active {
-  background-color: #33a365;
-  color: #ffffff;
+  background: #072707;
+  color: #fff;
+  border-color: #055005;
 }
 
-/* Основний макет */
-main {
+/* ===== ОСНОВНА ЧАСТИНА ===== */
+.main-layout {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 30px 60px;
+  gap: 20px;
+  padding: 20px 40px;
 }
 
-/* Бокове меню */
+/* ===== МЕНЮ ЗЛІВА ===== */
 .sidebar {
-  width: 230px;
-  background-color: #153524;
-  padding: 15px;
-  border-radius: 20px;
-  margin-right: 25px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.sidebar button {
-  width: 100%;
-  background-color: #256b46;
-  border: none;
-  color: #e6f0eb;
-  padding: 12px;
-  border-radius: 15px;
-  margin: 6px 0;
+.side-btn {
+  background: #d9e1d3;
+  border: 2px solid #8b9b7a;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-size: 14px;
+  text-align: left;
   cursor: pointer;
-  transition: 0.25s;
+  transition: 0.2s;
 }
 
-.sidebar button:hover {
-  background-color: #2d8f5c;
+.side-btn:hover {
+  background: #cfdac7;
 }
 
-.sidebar button:active {
-  background-color: #1c5233;
+.side-btn.active {
+  background: #072707;
+  color: #fff;
+  border-color: #055005;
 }
 
-/* Контентна область */
-.content {
+/* ===== ОБЛАСТЬ ВИВЕДЕННЯ ===== */
+.main-area {
   flex: 1;
-  background-color: #1b3a28;
+  background: #e5e7de;
   border-radius: 20px;
+  box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.15);
   padding: 25px;
-  min-height: 420px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+  min-height: 400px;
+  font-size: 18px;
+   line-height: 1.6;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
+.main-area table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+.main-area th,
+.main-area td {
+  border: 1px solid #144d2b;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.main-area th {
+  background-color: #cfdac7;
+  font-weight: bold;
+}
+
+.main-area img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.placeholder {
+  color: #6c6c6c;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.codes {
+  display: block;
+  font-family: monospace;
+  font-size: 15px;
+  unicode-bidi: isolate;
+  white-space: pre;
+  margin-block: 1em 1em;
+  margin-inline: 0px;
+}
+
+/* Відступи для вкладених кнопок */
+.indent-1 {
+  margin-left: 20px;
+}
+
+.indent-2 {
+  margin-left: 40px;
+}
+
+.indent-3 {
+  margin-left: 60px;
+}
+
+#text_example {
+  font-family: 'Poppins', sans-serif;
+  color: #AF1FCC;
+  background-color: #e5e7de;
+  font-size: 20px;
+  text-shadow: 2px 2px 6px rgba(175, 31, 204, 0.4);
+  margin: 10px 0;
 }
