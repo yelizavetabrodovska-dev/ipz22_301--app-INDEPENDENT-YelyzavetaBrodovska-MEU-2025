@@ -55,17 +55,8 @@ function showSection(id, btn) {
 const secTitles = {
   desc: "Опис предметного середовища",
   topic: "Тема, мета та місце розташування",
-  structure: "Структура документа",
-  tables: "HTML-код таблиць",
-  forms: "HTML-код форми",
-  images: "HTML-код зображення",
   concl: "Висновки",
-  selectors: "Селектори тегу",
-  class_selectors: "Селектори класу",
-  id_selectors: "Селектори ідентифікатора",
-  other_selectors: "Інші селектори",
-  css_examples: "CSS: Шрифти, текст, таблиці, фон, контур, списки",
-  questions: "Контрольні запитання"
+  questions: "Контрольні запитання",
 };
 
 // Завантажуємо першу лабу за замовчуванням
